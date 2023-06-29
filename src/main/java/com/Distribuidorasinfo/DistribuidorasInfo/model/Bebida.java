@@ -11,11 +11,8 @@ import static jakarta.persistence.GenerationType.SEQUENCE;
 
 @Data
 @Entity
-@Table( name = "TBL_BEBIDA",
-        uniqueConstraints = {
-                @UniqueConstraint(name= Bebida.UK_DISTRIBUIDORA_NAME, columnNames = Bebida.DISTRIBUIDORA_MARCA)
-        }
-)
+@Table(name = "TBL_BEBIDA")
+
 public class Bebida implements IEntidade<Long> {
     public static final String UK_DISTRIBUIDORA_NAME = "uk_anime_name";
     public static final String DISTRIBUIDORA_MARCA = "nome";
@@ -36,7 +33,7 @@ public class Bebida implements IEntidade<Long> {
             generator = "a_gerador_sequence"
     )
     @Id
-    @Column(name = "CodigoBebida")
+    @Column(name = "id_bebida")
     private Long id;
 
     @Column(name = DISTRIBUIDORA_MARCA, nullable = false)
@@ -50,6 +47,7 @@ public class Bebida implements IEntidade<Long> {
 
     @Column(name = "CategoriaBebida", nullable = false)
     private String categoriaBebida;
+
 
     @Override
     public String getTabelaNome() {

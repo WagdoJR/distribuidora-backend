@@ -9,7 +9,8 @@ public enum SistemaMessageCode implements MessageCode {
     ERRO_BD("ME003", 404),
 
     ERRO_CAMPOS_OBRIGATORIOS("MSG-001", 400),
-    MSG_OPERACAO_REALIZADA_SUCESSO("MSG-002", 200);
+    MSG_OPERACAO_REALIZADA_SUCESSO("MSG-002", 200),
+    QUANIDADE_MENOR_QUE_O("MSG-003", 400);
 
     private final String code;
 
